@@ -7,3 +7,6 @@
 ## Script gaussian.py
 - This script takes a system of linear equations (in matrix form) and solves it using gaussian elimination, printing every step along the way
 - Input matrix has currently to be entered inside the script file.
+
+## Script plot3d
+- Does not work (yet)
