@@ -81,14 +81,21 @@ def gaussian_elimination(A, b):
     return x
 
 # EDIT MATRIX HERE
+# EDIT MATRIX HERE
+# EDIT MATRIX HERE
+# EDIT MATRIX HERE
+# EDIT MATRIX HERE
+# EDIT MATRIX HERE
+# EDIT MATRIX HERE
+
 # A = [[2, 4, 0], [-3, -6, -3], [1, 2, 1]]
 # b = [12, 12, 9]
 
 # A = [[1, 1, -2], [1, 3, -1], [2, 1, -5]]
 # b = [4, 7, 7]
 
-A = [[1, -1, -2], [1, 2, 1], [0, 0, 4]]
-b = [1, 1, 1]
+A = [[-1, 0, 0, 1], [1, -1, 0, 0], [0, 1, -1, 0], [0, 0, 1, -1]]
+b = [-100, -200, 200, 100]
 
 print()
 print("STARTING GAUSSIAN ELIMINATION WITH MATRIX:")
