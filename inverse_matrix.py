@@ -13,40 +13,57 @@ def invert_matrix(A):
 
     # Create a copy of the matrix and the identity matrix
     M = np.hstack((A, I))
-    print("M:", M)
+    print("M:")
+    print(M)
 
     # Perform row operations to transform M into an upper triangular matrix
     for i in range(n):
-        # Check if the pivot element is zero
+    # Check if the pivot element is zero
         if M[i, i] == 0:
             # Find a row with a nonzero pivot element
             for j in range(i+1, n):
                 if M[j, i] != 0:
                     # Swap rows i and j
                     M[[i, j], :] = M[[j, i], :]
+                    print(f"Swap rows {i+1} and {j+1}")
+                    print("M:")
+                    print(M)
                     break
         # Check if the pivot element is still zero
         if M[i, i] == 0:
             raise ValueError("Matrix is singular.")
 
         # Divide row i by the pivot element
-        M[i, :] /= M[i, i]
+        pivot = M[i, i]  # Store the pivot element
+        M[i, :] /= pivot  # Divide the row by the pivot element
+        if pivot != 1:  # Check if the pivot element is not 1
+            print(f"Multiply row {i+1} by {1/pivot}")  # Print a 
+
 
         # Subtract row i from the other rows
         for j in range(n):
             if i == j:
                 continue
+            print(f"Add {-M[j, i]}x row {i+1} to row {j+1}")
             M[j, :] -= M[j, i] * M[i, :]
-        print("M:", M)
+            print("M:")
+            print(M)
 
     # Extract the inverse matrix from the right side of M
     A_inv = M[:, n:]
-    print("A_inv:", A_inv)
+    print("A_inv:",)
+    print(A_inv)
 
     return A_inv
 
 # Define a matrix A
-A = np.array([[-1, 0, 2], [1, 1, -1], [-1, 1, 1]])
+# A = np.array([[0, 1, 1], [-2, -1, -2], [1, 1, 2]])
+
+# A = np.array([[-1, -2, 0], [-1, -4, 1], [3, 7, 0]])
+A = np.array([[2, -1], [4, -3]])
+
+# A = np.array([[0, -1, -2], [-1, 3, 6], [1, -2, -4]])
+
 
 # Invert the matrix
 A_inv = invert_matrix(A)
