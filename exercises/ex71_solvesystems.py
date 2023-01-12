@@ -60,7 +60,21 @@ b = np.array([ [16], [-2], [58], [69] ])
 # Ex. F
 
 # A = np.array([ [1.1, -2, 9.3, 0], [-3.3, 4.8, -27.3, -0.5], [4.4, -4.4, 38.6, -0.8], [2.2, -1.6, 23.8, -3.6]]) 
-# b = np.array([ [26.2], [-75.7], [108], [54.2] ])
+# b = np.array([ [26.2], [-75.7], [108], [54.2] ])¨
+
+# A = np.array([ [1, 2, -3], [-3, 2, 7], [0, 0, 0]]) 
+# b = np.array([ [1], [-1], [5]])
+
+# alcoholfriends
+A = np.array([ [1.9, 2.28, 0, 0, 0, 0, 0], [0, 0, 2.28, 1.56, 0, 0, 0], [0, 0, 0, 0, 2.4, 1.56, 1.58]]) 
+b = np.array([ [6.08], [5.4], [7.94]])
+
+#####
+#####
+#####
+#####
+#####
+#####
 
 rkA = np.linalg.matrix_rank(A) 
 
@@ -75,6 +89,7 @@ nullityA = lenA - rkA
 
 print("rkA:", rkA) 
 print("rkAb:", rkAb)
+print("Free Parameters (nullity):", nullityA)
 
 if rkA != rkAb:
     print("This system has no solution, since the ranks are not the same.")

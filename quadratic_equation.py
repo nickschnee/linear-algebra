@@ -1,5 +1,9 @@
 # Test Script
 
+# Quadratic equation: 
+# -b + sqrt(b^2 -4ac) / 2a
+# -b - sqrt(b^2 -4ac) / 2a
+
 # Example Of Quadratic Equations With No Real Solution
 # x2 + x + 1 = 0
 
