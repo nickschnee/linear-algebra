@@ -11,8 +11,8 @@ import scipy.linalg as la
 # Ex. A
 # Ex. A
 
-# A = np.array([ [24, 68, 0, -36], [0, 34, 82, -79], [5, 76, -33, 0], [-2, 0, -63, 65] ]) 
-# b = np.array([ [16], [-2], [58], [69] ]) 
+A = np.array([ [24, 68, 0, -36], [0, 34, 82, -79], [5, 76, -33, 0], [-2, 0, -63, 65] ]) 
+b = np.array([ [16], [-2], [58], [69] ]) 
 
 # Ex. B
 # Ex. B
@@ -20,8 +20,8 @@ import scipy.linalg as la
 # Ex. B
 # Ex. B
 
-A = np.array([ [0, -6, 18, 12], [-5, -15, 15, 6], [-15, -38, 24, 4] ]) 
-b = np.array([ [24], [11], [9] ])
+# A = np.array([ [0, -6, 18, 12], [-5, -15, 15, 6], [-15, -38, 24, 4] ]) 
+# b = np.array([ [24], [11], [9] ])
 
 # Ex. C 
 # Ex. C 
@@ -40,8 +40,8 @@ b = np.array([ [24], [11], [9] ])
 # Ex. D
 # Ex. D - correct solution
 
-A = np.array([ [2e7, 1e7, -3e7], [6.4e7, 3.2e7, -9.6e7], [-5e6, -2.5e6, 7.5e6], [2.2e8, 1.1e8, -3.3e8] ]) 
-b = np.array([ [-5], [-16], [1.253], [-55] ])
+# A = np.array([ [2e7, 1e7, -3e7], [6.4e7, 3.2e7, -9.6e7], [-5e6, -2.5e6, 7.5e6], [2.2e8, 1.1e8, -3.3e8] ]) 
+# b = np.array([ [-5], [-16], [1.253], [-55] ])
 
 # Ex. E
 # Ex. E
@@ -68,16 +68,22 @@ rkAb = np.linalg.matrix_rank(np.hstack([A,b]))
 
 n_cols = A.shape[1]
 
+lenA = len(A[0])
+nullityA = lenA - rkA
+
 # when rkA is not equal to rkAb, then the matrix has no solution
 
 print("rkA:", rkA) 
 print("rkAb:", rkAb)
 
 if rkA != rkAb:
-    print("It appears that this system has no solutions, since the ranks are not the same.")
+    print("This system has no solution, since the ranks are not the same.")
+
+elif rkA == rkAb and rkA == n_cols:
+    print("The system has a unique solution, rkA == rkAb and nullity == 0")
 
 elif rkA == rkAb:
-    print("The system has at least one solution")
+    print("The system has many solutions. Determine with least squares and free parameters.")
 
 
 # check if matrix A is regular
