@@ -1,15 +1,15 @@
-import numpy as np
+import numpy as np 
+import scipy.linalg as la
 
-a = 1.5 * 2 * 2.5 
-b = (-2) * 0 * 1 
-c = 1 * 0.5 * 2
+A = np.array([ [2, -1], [1, 4]]) 
+B = np.array([ [-4], [-3] ])
 
-d = 1 * 2 * 1 
-e =1.5 * 0 * 2
-f = (-2 * 0.5 * 2.5)
+# print(A@A)
 
-# print(a + b + c - d - e - f) 
+print(B.T@B)
 
-print(1.5 * (4/3))
+print(1875/6.25)
 
-print((-2) * (-1.5) * (-4/3) * (-5/4))
+print(5*(-550+2.1*300))
+
+print(10*(210-0.6*300))
