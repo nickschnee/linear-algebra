@@ -5,8 +5,8 @@ import numpy as np
 
 # A = np.array([[0, 1, -2, 1], [2, 0, 4, 2], [3, 4, -4, 3], [-4, 2, -1, -2]])
 
-A = np.array([[0, 1, -2, 1], [2, 0, 4, -2], [3, 4, -4, 3], [-1, 2, -1, -2]])
-b = np.array([0, 6, 11, -8])
+A = np.array([[2, 3, -1], [4, 6, -2]])
+b = np.array([0, 30])
 
 # get the rank of matrix A
 rank_A = np.linalg.matrix_rank(A)

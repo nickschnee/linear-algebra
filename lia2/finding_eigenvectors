@@ -1,0 +1,14 @@
+import numpy as np 
+
+
+#A = np.array([[14,3],[
+#    3,6]])
+A = np.array([[5,2],[0,3]])
+eigenvalues, eigenvectors = np.linalg.eig(A) 
+print("Eigenvalues: " + str(eigenvalues))
+print("Eigenvector: " + str(eigenvectors))
+
+
+
+
+

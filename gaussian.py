@@ -94,8 +94,8 @@ def gaussian_elimination(A, b):
 # A = [[1, 1, -2], [1, 3, -1], [2, 1, -5]]
 # b = [4, 7, 7]
 
-A = [[1, 0, 0],[-3, 1, 0],[0, -1, 1]]
-b = [6, -12, -7]
+A = [[-3, 1, -2, -6], [1,1,0.6666,2], [0,3,0,3], [6,-5,4,-1]]
+b = [0, 0, 0, 0]
 
 print()
 print("STARTING GAUSSIAN ELIMINATION WITH MATRIX:")

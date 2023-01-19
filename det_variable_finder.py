@@ -5,6 +5,7 @@ import sympy as sp
 # Create symbolic variables for the entries of the matrix A
 x = sp.Symbol('x')
 a = sp.Matrix([ [x, -1, 5], [-5, 1, 5], [5, -1, x] ])
+a = sp.Matrix([ [-2, 1, x, 0], [-3, x, 0, 0], [1, -2, 3, 0], [3, -3, -2, 3] ])
 
 # Calculate the determinant of A
 detA = a.det()

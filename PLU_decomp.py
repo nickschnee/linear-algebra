@@ -9,7 +9,7 @@ from scipy.linalg import lu
 # Gaussian elimination algorithm and the Crout algorithm.
 
 
-A = np.array([[4, -1, 3],[-1, 2, 0],[2,3,5/2]])
+A = np.array([[2, 3, -1],[4, 6, -2]])
 P, L, U = lu(A)
 
 print("P =")
